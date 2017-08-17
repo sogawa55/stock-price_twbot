@@ -1,3 +1,5 @@
+#heroku起動確認用
+
 import os
 from bottle import route, run
 

@@ -1,46 +1,23 @@
+# 株価予測Twitterbot
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## botの特徴
+* 東証一部上場企業上位50社の明日の株価を予測して自動ツイートするTwitterbot
+* 一定時間ごとに50社の中からランダムで企業を選定して予測株価をツイート
+* 過去1年間分の初値、終値、最安値、最高値、出来高の数値を教師データとして使用
+* Google finane APIからデータを取得
+* サポートベクタ回帰分析アルゴリズムを使用した統計的な予測
+* ランダムでbotのコメントも付与
+
+<img src="https://user-images.githubusercontent.com/26180642/29406391-e3a24966-837b-11e7-97d0-66dd39eabdbb.jpg" width="400px">
+<img src="https://user-images.githubusercontent.com/26180642/29406417-fbba50ac-837b-11e7-8d83-a1008f35cc77.jpg" width="400px">
+<img src="https://user-images.githubusercontent.com/26180642/29406453-0f413834-837c-11e7-879c-fd5620eb9dd4.jpg" width="400px">
 
 
-Welcome to your Python project on Cloud9 IDE!
+## 使用技術
+* python 3.6.0
+* Anaconda 4.0
+* Paas：heroku
+* lib：scikit-learn,pandas,tweepy..etc
+* Twitter API
+* Google finance API
 
-To show what Cloud9 can do, we added a basic sample web application to this
-workspace, from the excellent Python tutorial _Learning Python the Hard Way_.
-We skipped ahead straight to example 50 which teaches how to build a web
-application.
-
-If you've never looked at the tutorial or are interested in learning Python,
-go check it out. It's a great hands-on way for learning all about programming
-in Python.
-
-* _Learning Python The Hard Way_, online version and videos: 
-http://learnpythonthehardway.org/book/
-
-* Full book: http://learnpythonthehardway.org
-
-## Starting from the Terminal
-
-To try the example application, type the following in the terminal:
-
-```
-cd ex50
-python bin/app.py
-```
-
-Alternatively, open the file in ex50/bin and click the green Run
-button!
-
-## Configuration
-
-You can configure your Python version and `PYTHONPATH` used in
-Cloud9 > Preferences > Project Settings > Language Support.
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide.
